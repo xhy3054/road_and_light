@@ -1,15 +1,17 @@
 # !/bin/bash
 
-caffe_root_dir="/home/night/caffe-ssd"
+caffe_root_dir="/home/night/traffic_light/caffe-ssd"
+
+#the current path should be "/home/night/traffic_light/"
 current_dir=`pwd`
 # we changed data root dir and data_ser_name and label_type
 redo=1
 # this is your root data dir
-data_root_dir="$HOME/data/LISA"
+data_root_dir="$current_dir/data/LISA"
 # using this access your caffe/data/dataset dir, trainval.txt and test.txt in it
 dataset_name="LISA"
 # your map file
-mapfile="$current_dir/labelmap_lisa.prototxt"
+mapfile="$current_dir/models/labelmap_lisa.prototxt"
 echo $mapfile
 anno_type="detection"
 label_type="txt"

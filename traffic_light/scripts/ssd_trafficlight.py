@@ -6,7 +6,7 @@ plt.rcParams['image.interpolation'] = 'nearest'
 plt.rcParams['image.cmap'] = 'gray'
 
 # change this to your caffe root dir
-caffe_root = '/home/night/caffe-ssd'
+caffe_root = '/home/night/traffic_light/caffe-ssd'
 import os
 import sys
 sys.path.insert(0, caffe_root + '/python')
@@ -20,7 +20,7 @@ caffe.set_mode_cpu()
 print('Check Caffe OK!')
 
 # load label map file
-labelmap_file = '/home/night/caffe-ssd/examples/trafficlight/labelmap_voc.prototxt'
+labelmap_file = '/home/night/traffic_light/models/labelmap_lisa.prototxt'
 file = open(labelmap_file, 'r')
 labelmap = caffe_pb2.LabelMap()
 a = text_format.Merge(str(file.read()), labelmap)
@@ -42,8 +42,8 @@ def get_labelname(labelmap, labels):
     return labelnames
 
 # load model deploy prototxt and caffemodel weights
-model_def = '/home/night/caffe-ssd/examples/trafficlight/deploy.prototxt'
-model_weights = '/home/night/caffe-ssd/examples/trafficlight/Autoware_tlr_SSD_300x300_iter_60000.caffemodel'
+model_def = '/home/night/traffic_light/models/deploy.prototxt'
+model_weights = '/home/night/traffic_light/models/LISA/SSD_414x125/VGG_LISA_SSD_414x125_iter_120000.caffemodel'
 
 net = caffe.Net(model_def,     
                 model_weights,

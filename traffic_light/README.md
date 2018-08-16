@@ -7,7 +7,7 @@
 ssd的作者使用caffe框架进行ssd的开发。并在github上提供了ssd版本的[caffe](https://github.com/weiliu89/caffe/tree/ssd)。第一步便是安装 ssd-caffe 。这与 segnet-caffe 的安装方式基本一致，重新来一遍即可。
 
 ### 目录结构
-`ssd`作者有些不修边幅，提供的代码比较杂乱，所以不建议照搬。建议此处使用与`segnet`相似的目录结构:
+`ssd`作者有些不修边幅，提供的代码比较杂乱，所以不建议照搬原代码格式。建议此处使用与`segnet`相似的目录结构:
 
 	/SSD/
 		data/
@@ -46,7 +46,7 @@ ssd的作者使用caffe框架进行ssd的开发。并在github上提供了ssd版
 
 ### 使用SSD模型进行检测
 
-	python ssd_trafficlight.py
+	python ssd_detection.py
 
 注意：此处检测代码我是放到caffe根目录下运行的，所以运行时注意路径。
 

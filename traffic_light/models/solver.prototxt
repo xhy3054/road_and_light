@@ -1,5 +1,5 @@
-train_net: "models/VGGNet/LISA/SSD_414x125/train.prototxt"
-test_net: "models/VGGNet/LISA/SSD_414x125/test.prototxt"
+train_net: "models/train.prototxt"
+test_net: "models/test.prototxt"
 test_iter: 103
 test_interval: 10000
 base_lr: 0.0001

@@ -45,7 +45,7 @@ layer {
     }
   }
   data_param {
-    source: "/home/night/data/LISA/lmdb/LISA_trainval_lmdb"
+    source: "/home/night/traffic_light/data/LISA/lmdb/LISA_trainval_lmdb"
     batch_size: 6
     backend: LMDB
   }
@@ -132,7 +132,7 @@ layer {
       max_sample: 1
       max_trials: 50
     }
-    label_map_file: "/home/night/data/LISA/data/labelmap_lisa.prototxt"
+    label_map_file: "/home/night/traffic_light/models/labelmap_lisa.prototxt"
   }
 }
 layer {

@@ -20,14 +20,14 @@ layer {
     }
   }
   data_param {
-    source: "/home/night/data/LISA/lmdb/LISA_test_lmdb"
+    source: "/home/night/traffic_light/data/LISA/lmdb/LISA_test_lmdb"
     batch_size: 8
     backend: LMDB
   }
   annotated_data_param {
     batch_sampler {
     }
-    label_map_file: "/home/night/data/LISA/data/labelmap_lisa.prototxt"
+    label_map_file: "/home/night/models/labelmap_lisa.prototxt"
   }
 }
 layer {
@@ -1582,11 +1582,11 @@ layer {
       top_k: 400
     }
     save_output_param {
-      output_directory: "/home/night/data/LISA/results/SSD_414x125/Main"
+      output_directory: "/home/night/traffic_light/data/LISA/results/SSD_414x125/Main"
       output_name_prefix: "comp4_det_test_"
       output_format: "VOC"
-      label_map_file: "/home/night/data/LISA/data/labelmap_lisa.prototxt"
-      name_size_file: "/home/night/data/LISA/data/test_name_size.txt"
+      label_map_file: "/home/night/traffic_light/models/labelmap_lisa.prototxt"
+      name_size_file: "/home/night/traffic_light/data/test_name_size.txt"
       num_test_image: 822
     }
     code_type: CENTER_SIZE
@@ -1608,7 +1608,7 @@ layer {
     background_label_id: 7
     overlap_threshold: 0.5
     evaluate_difficult_gt: false
-    name_size_file: "/home/night/data/LISA/data/test_name_size.txt"
+    name_size_file: "/home/night/traffic_light/data/test_name_size.txt"
   }
 }
 
